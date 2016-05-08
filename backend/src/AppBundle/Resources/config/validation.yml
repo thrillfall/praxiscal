@@ -1,0 +1,38 @@
+AppBundle\Entity\Appointment:
+    properties:
+        firstname:
+        
+        lastname:
+            
+        street:
+            
+        city:
+            
+        zip:
+            
+        email:
+            
+        phone:
+            
+        birthdate:
+                    
+        firstVisit:
+            - Type: 
+                type: bool
+        userConfirmed:
+            - Type:
+                type: bool
+        praxisConfirmed:
+            - Type:
+                type: bool        
+        services:
+            - Type:
+                type: array
+        timeslot:
+            - Type: 
+                type: datetime
+        isBlocker:
+            - Type: 
+                type: bool        
+                    
+                        

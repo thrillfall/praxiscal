@@ -1,0 +1,22 @@
+imports:
+    - { resource: parameters.yml }
+
+security:
+    firewalls:
+        default:
+            anonymous: ~
+            http_basic: ~
+
+    access_control:
+        # require ROLE_ADMIN for /admin*
+        - { path: ^/api/admin, roles: ROLE_ADMIN }
+    providers:
+        in_memory:
+            memory:
+                users:
+                    termine:
+                        password: "%auth_password%"
+                        roles: 'ROLE_ADMIN'
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        FOS\UserBundle\Model\UserInterface: sha512   
