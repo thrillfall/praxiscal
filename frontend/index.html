@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="mainModule">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Simple app</title>
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="js/vendor/bootstrap.min.css">
+</head>
+<body>
+
+<div ng-controller="AppointmentController">
+    <div class="container">
+        <h2>freie Termine</h2>
+          <table class="table">
+              <tr ng-repeat="slot in slots">
+                <td> {{ slot | date : 'EEEE, MMMM d, y H:mm' }} </td>
+                <td> <button ng-click="reserveSlot(slot)">Reservieren</button></td>
+              </tr>              
+          </table>
+          <button ng-click="advanceRange('+')">nächste Woche</button>          
+          <button ng-click="advanceRange('-')" ng-show="stepsIntoFuture">vorherige Woche</button>
+    </div>
+    <div ng-include="'templates/appointment_edit.html'" ng-show="slotSelected"/>
+
+</div>
+
+
+	
+  <script src="js/vendor/angular.min.js"></script>
+  <script src="js/vendor/angular-locale_de-de.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/vendor/angular-resource.js"></script>
+
+</body>
+</html>

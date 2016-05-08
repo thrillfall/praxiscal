@@ -1,0 +1,104 @@
+    <div class="container">
+        <h1>Neuer Termin</h1>
+
+        <form novalidate="novalidate" class="form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="inputFirstName">Vorname:</label>
+                <div class="controls">
+                    <input type="text" id="inputFirstName" ng-model="appointment.firstName"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="inputLastName">Nachname:</label>
+                <div class="controls">
+                    <input type="text" id="inputLastName" ng-model="appointment.lastName"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="inputStreet">Straße Hausnummer:</label>
+                <div class="controls">
+                    <input type="text" id="inputStreet" ng-model="appointment.street"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="inputZip">Postleitzahl:</label>
+                <div class="controls">
+                    <input type="text" id="inputZip" ng-model="appointment.zip"/>
+                </div>
+                <label class="col-sm-2 control-label" for="inputCity">Ort:</label>
+                <div class="controls">
+                    <input type="text" id="inputCity" ng-model="appointment.city"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="inputPhone">Telefon:</label>
+                <div class="controls">
+                    <input type="text" id="inputPhone" ng-model="appointment.phone"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="inputEmail">Email:</label>
+                <div class="controls">
+                    <input type="text" id="inputEmail" ng-model="appointment.email"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label" for="inputBirthdate">Geburtstdatum:</label>
+                <div class="controls">
+                    <input type="text" id="inputBirthdate" ng-model="appointment.birthdate"/>
+                </div>
+            </div>
+            <h3>Waren Sie schon einmal bei uns?</h3>
+            <div class="form-group">
+                <label class="radio-inline">
+                    <input type="radio" id="inputFirstTime" value="true" ng-model="appointment.firstTime" /> Ja
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" id="inputFirstTime" value="false" ng-model="appointment.firstTime"/> Nein
+                </label>                    
+            </div>
+            <h3>Haben Sie einen Überweisungsschein?</h3>
+            <div class="form-group">
+                <label class="radio-inline">
+                    <input type="radio" id="inputReferral" value="true" ng-model="appointment.withReferral" /> Ja:
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" id="inputReferral" value="false" ng-model="appointment.withReferral"/> Nein:
+                </label> 
+            </div>
+            <h3>Welche Leistungen wünschen sie?</h3>
+            <div class="form-group">
+                <div class="checkbox">
+                 <label><input type="checkbox" ng-model="appointment.services.sportPreExam" value=""/>Sportärztliche Voruntersuchung</label>
+             </div>
+             <div class="checkbox">
+                 <label><input type="checkbox" ng-model="appointment.services.privateExam" value=""/>Untersuchung fuer Selbstzahler und/oder Privatpatienten</label>
+             </div>
+             <div class="checkbox">
+                 <label><input type="checkbox" ng-model="appointment.services.stressecho" value=""/>Stressechokardiographie</label>
+             </div>
+             <div class="checkbox">
+                 <label><input type="checkbox" ng-model="appointment.services.heartultrasound" value=""/>Herzultraschall</label>
+             </div>
+             <div class="checkbox">
+                 <label><input type="checkbox" ng-model="appointment.services.ecg" value=""/>EKG</label>
+             </div>
+             <div class="checkbox">
+                 <label><input type="checkbox" ng-model="appointment.services.pacemakercontrol" value=""/>Herzschrittmacherkontrolle</label>
+             </div>
+             <div class="checkbox">
+                 <label><input type="checkbox" ng-model="appointment.services.lab" value=""/>Labor</label>
+             </div>
+
+             <div class="form-group">
+                <div class="controls">
+                  <!-- user-detail.html: -->
+                  <a ng-click="cancel()" class="btn btn-small">cancel</a>
+
+                  <!-- user-creation.html: -->
+                  <a ng-click="save()" class="btn btn-small btn-primary">Termin reservieren</a>
+              </div>
+          </div>
+      </div>
+  </form>
+</div>

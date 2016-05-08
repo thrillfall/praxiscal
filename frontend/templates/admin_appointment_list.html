@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="mainModule">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>Simple app</title>
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+
+<div ng-controller="AppointmentIndexController">
+<table class="table">
+	<tr ng-repeat="appointment in appointments">
+  <td> {{ appointment.id }} </td>	
+  <td> {{ appointment.timeslot | date }} </td>  
+  <td> {{ appointment.lastname }} </td>  
+  <td> {{ appointment.prename }} </td>  
+  <td> {{ appointment.first_visit }} </td>  
+</table>
+</div>
+
+  <script src="js/vendor/angular.min.js"></script> 
+  <script src="js/main.js"></script>
+  <script src="js/vendor/angular-resource.js"></script>
+
+</body>
+</html>
